@@ -4,6 +4,9 @@ App-hackfest2017
 ## Licença
 Esta aplicação está disponível como um projeto de código aberto de acordo com os termos da [GNU GENERAL PUBLIC LICENSE](https://github.com/ajeremias/soufiscal/blob/master/LICENSE)
 
+## Site Oficial
+https://francasense.github.io/francajr/soufiscal/
+
 This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
 
 ## Preparando o ambiente
