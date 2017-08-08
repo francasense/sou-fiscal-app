@@ -14,8 +14,27 @@ Download do node pode ser encontrado aqui:https://nodejs.org/
 ```bash
 $ versão usada no projeto foi a 8.2.1
 ```
+### Necessário instalar o cordova:
 
+Download do node pode ser encontrado aqui:https://cordova.apache.org/
 
+```bash
+$ npm install -g cordova
+```
+### Utilizado Ionic3:
+
+Download do node pode ser encontrado aqui:https://ionicframework.com
+
+```bash
+$ Versão 3 do Ionic
+```
+### Utilizado angular:
+
+Download do node pode ser encontrado aqui:https://angularjs.org/
+
+```bash
+$ Versão 4 do Angular
+```
 
 ## How to use this template
 
