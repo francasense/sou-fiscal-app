@@ -1,4 +1,4 @@
-# sou-fiscal-app
+# souFISCAL
 App-hackfest2017
 
 ## Licença
