@@ -6,6 +6,17 @@ Esta aplicação está disponível como um projeto de código aberto de acordo c
 
 This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
 
+## Preparando o ambiente
+### Necessário instalar o nodejs v8:
+
+Download do node pode ser encontrado aqui:https://nodejs.org/
+
+```bash
+$ versão usada no projeto foi a 8.2.1
+```
+
+
+
 ## How to use this template
 
 *This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
