@@ -481,6 +481,15 @@ h6,
 #header1-1 .mbr-section-lead {
   color: #ffffff;
 }
+#msg-box2-3 .mbr-section-title {
+  color: #fff;
+}
+#msg-box2-3 .mbr-section-subtitle {
+  color: #a0a0a0;
+}
+#msg-box2-3 .btn {
+  font-size: 18px;
+}
 #header6-2 .mbr-section-title {
   color: #28262b;
 }
