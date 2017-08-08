@@ -4,8 +4,8 @@ App-hackfest2017
 ## Licença
 Esta aplicação está disponível como um projeto de código aberto de acordo com os termos da [GNU GENERAL PUBLIC LICENSE](https://github.com/ajeremias/soufiscal/blob/master/LICENSE)
 
-## Site Oficial
-https://francasense.github.io/sou-fiscal-app/site
+## Disponíel para Android 
+https://play.google.com/store/apps/details?id=com.soufiscal.app
 
 This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
 
@@ -63,3 +63,5 @@ $ ionic cordova run ios
 
 Substitute ios for android if not on a Mac.
 
+## Licença
+Esta aplicação está disponível como um projeto de código aberto de acordo com os termos da [GNU GENERAL PUBLIC LICENSE](https://github.com/ajeremias/soufiscal/blob/master/LICENSE)
