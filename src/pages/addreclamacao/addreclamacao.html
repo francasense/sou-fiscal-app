@@ -1,0 +1,115 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Adicionar Reclamação</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <ion-list>
+
+
+      <ion-item>
+        <ion-label color="primary">Reclamação</ion-label>
+        <ion-input placeholder="Título da reclamação" name="title" ngModel required></ion-input>
+      </ion-item>
+
+    <ion-item>
+       
+      <ion-label>Data de início</ion-label>
+  <ion-datetime displayFormat="DD-MM-YYYY" min="2010" max="2050-10-31" name="data_inicial" ngModel required>
+  </ion-datetime>
+      </ion-item>
+
+
+      <ion-item>
+       
+      <ion-label>Data de entrega</ion-label>
+
+  <ion-datetime displayFormat="DD-MM-YYYY" min="2010" max="2050-10-31" name="dada_termino" ngModel required>
+  </ion-datetime>
+      </ion-item>
+         <ion-item>
+        <ion-label color="primary">Valor da obra em Real</ion-label>
+        <ion-input type="number" name="valorObra" placeholder="Ex: 200.000,00" ng-model="number" ui-number-mask="3" ngModel required></ion-input>
+      </ion-item>
+
+
+
+      <ion-item>
+        <ion-label color="primary">Descrição</ion-label>
+        <ion-textarea placeholder="Detalhes da Reclamação" name="description" ngModel required></ion-textarea>
+      </ion-item>
+
+
+    </ion-list>
+
+
+    <ion-grid>
+
+
+
+      <ion-row>
+        <ion-col>
+          <button ion-button block outline type="button" icon-left (click)="onLocate()">
+        <ion-icon name="locate"></ion-icon>
+        Minha Localização
+        </button>
+        </ion-col>
+
+        <ion-col>
+          <button ion-button block outline type="button" icon-left (click)="onOpenMap()">
+        <ion-icon name="map"></ion-icon>
+        Localize no mapa
+        </button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="locationIsSet">
+        <ion-col>
+          <sebm-google-map [latitude]="location.lat" [longitude]="location.lng" [zoom]="16">
+            <sebm-google-map-marker [latitude]="location.lat" [longitude]="location.lng">
+            </sebm-google-map-marker>
+          </sebm-google-map>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col text-center>
+          <h5>
+            Selecione a foto
+          </h5>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <button ion-button block outline type="button" icon-left (click)="takePicture()">
+            <ion-icon name="camera"></ion-icon>
+        Abrir Camera
+        </button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <img src="{{passarFoto}}">
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <button ion-button block color="secondary" type="submit" [disabled]="!f.valid ">
+        Adicionar Reclamação
+        </button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </form>
+
+</ion-content>

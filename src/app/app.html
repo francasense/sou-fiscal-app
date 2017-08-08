@@ -1,0 +1,41 @@
+<ion-menu [content]="nav">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Acesso</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>   
+      <button ion-item (click)="home()">
+        Principal
+      </button>   
+      <button ion-item (click)="comoajudade()"
+      *ngIf="!isAuthenticated">
+        Como reclamar
+      </button>
+       <button ion-item (click)="quem()">
+        Quem somos
+      </button>
+       <button ion-item (click)="equipe()">
+        Equipe souFiscal
+      </button>
+
+
+      <button ion-item (click)="logar()"
+      *ngIf="!isAuthenticated">
+        Entrar
+      </button>
+      <button ion-item (click)="cadastrar()"
+      *ngIf="!isAuthenticated">
+        Cadastrar-se
+      </button>
+      <button ion-item (click)="onLogout()"
+      *ngIf="isAuthenticated">
+        Sair
+      </button>
+     
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #nav></ion-nav>

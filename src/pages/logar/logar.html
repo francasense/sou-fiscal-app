@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>
+      Logar 
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+
+     <img src="https://res.cloudinary.com/dp9k5sbd4/image/upload/v1502115763/soufiscal_img/login.png">
+    <ion-card-content>
+      <ion-card-title>
+        Bem Vindo!
+      </ion-card-title>
+
+       
+        O souFiscal, é uma ferramenta de uso livre, para toda sociedade...
+      
+
+      <p align="center">
+        "Nunca duvide que um pequeno grupo de pessoas comprometidas possa mudar o mundo. De fato, isto é a única coisa que se conseguiu."
+      </p>
+       <p align="right">
+        Margaret Meade.
+      </p>
+
+
+      <form #f="ngForm" (ngSubmit)="login(f)">
+        <ion-list>
+          <ion-item>
+            <ion-label fixed>Email</ion-label>
+            <ion-input type="email" ngModel name="email" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label fixed>Senha</ion-label>
+            <ion-input type="password" ngModel name="password" required></ion-input>
+          </ion-item>
+
+        </ion-list>
+
+        <button ion-button block [disabled]="!f.valid">Logar</button>
+
+      </form>
+              <button ion-button block color="secondary" (click)="logina()">Entar como anônimo</button>
+
+    </ion-card-content>
+
+
+  </ion-card>
+
+</ion-content>

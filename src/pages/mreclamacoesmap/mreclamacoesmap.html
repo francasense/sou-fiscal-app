@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Todas as reclamações</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <sebm-google-map 
+  [latitude]="location.lat"
+  [longitude]="location.lng"
+  [zoom]="16">
+<ion-list>
+  <ion-item *ngFor="let c of lista_reclamacao">
+    <sebm-google-map-marker [latitude]="c.latitude" [longitude]="c.longitude" 
+      (markerClick)="infoWindow">
+      <sebm-google-map-info-window #infoWindow [disableAutoPan]="true">
+          <img src="{{c.contract}}">
+        <ion-title>Reclamação: {{c.name}}</ion-title>
+          <p><strong> Detalhes da Reclamação: </strong> {{c.detail}}</p>
+          <p><strong> Valor: </strong> {{c.initial_value}}</p>
+          <p><strong> Data da Inicial: </strong> {{c.initial_date}}</p>
+      </sebm-google-map-info-window>
+    </sebm-google-map-marker>
+    </ion-item>
+      <ion-item>
+    
+    </ion-item>
+</ion-list>
+
+
+  </sebm-google-map>
+
+
+
+</ion-content>
+

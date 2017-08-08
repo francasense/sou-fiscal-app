@@ -1,0 +1,50 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Todas as reclamações</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <!--DIRETIVA DO ANGULAR-->
+<ion-card *ngFor="let c of lista_reclamacao">
+  <ion-item>
+    <ion-avatar item-start>
+     <img src="assets/imagens/perfil.png">
+    </ion-avatar>  <!--DIRETIVA DO ANGULAR-->
+    <h2 class="feed_title">{{ c.name }}</h2>
+    <p>Valor da Obra - {{ c.initial_value }}</p>
+  </ion-item>
+ <!--DIRETIVA DO ANGULAR USANDO UM BAIND-->
+  <img src="{{c.contract}}">
+
+  <ion-card-content>
+    <p><strong> Detalhes da Reclamação: </strong> {{ c.detail }}</p>
+     <p><strong> Resposta: </strong>Resposta</p>
+  </ion-card-content>
+
+  <ion-row align="center">
+    <ion-col>
+        <strong> Data Inicial: </strong>{{c.initial_date | date:'dd/MM/yyyy'}}
+    </ion-col>
+    <ion-col>
+         <strong> Previsão de entrega: </strong>{{c.delivery_forecast | date:'dd/MM/yyyy'}}
+    </ion-col>
+    <ion-col center text-center>
+      <ion-icon name="text"></ion-icon>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
+
+ <ion-fab top right edge>
+  <button ion-fab color="vibrant" mini (click)="ReclamacoesMap()">
+  <ion-icon name="map"></ion-icon></button>
+
+</ion-fab>
+
+</ion-content>
+

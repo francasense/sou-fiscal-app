@@ -1,0 +1,59 @@
+
+"id":11,
+"name":"rrwrwrwrw",
+"initial_value":432423.0,
+"initial_date":"2017-07-27",
+"delivery_forecast":null,
+"detail":"rwerrewr",
+"contract":null,
+"status":"v",
+"latitude":-7.47141090835783,
+"longitude":-34.8184204101562,
+"user_id":1,
+"created_at":"2017-08-03T16:33:05.623Z",
+"updated_at":"2017-08-03T16:33:05.623Z",
+"answer":null
+
+
+
+uploadPhoto() {
+
+  const token_retorno = JSON.parse(this.toKEN);
+    this.obj = token_retorno;
+    
+    let headers = new Headers({
+    "content-type": "application/json",
+    "authorization": this.obj.auth_token,
+  });
+  
+
+    let loader = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    loader.present();
+ 
+    let filename = this.imagePath.split('/').pop();
+    let options = JSON.stringify({
+      fileKey: "file",
+      fileName: filename,
+      chunkedMode: false,
+      mimeType: "image/jpg",
+      params: { 'title': this.postTitle, 'description': this.desc },
+      "content-type": "application/json",
+    "authorization": this.obj.auth_token,
+    });
+ 
+ 
+    const fileTransfer = new FileTransferObject();
+ 
+    fileTransfer.upload(this.imageNewPath, 'https://sou-fiscal.herokuapp.com/pics',options).then((entry) => {
+        this.imagePath = '';
+        this.imageChosen = 0;
+        loader.dismiss();
+        this.navCtrl.setRoot(AddreclamacaoPage);
+      }, (err) => {
+        alert(JSON.stringify(err));
+      });
+  }
+  
+

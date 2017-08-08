@@ -1,0 +1,54 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>souFiscal
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="card-background-page">
+
+
+
+  <ion-card (click)="MReclamacoes()" >
+      <img src="https://res.cloudinary.com/dp9k5sbd4/image/upload/v1502115772/soufiscal_img/minhas_reclmacoes.png">
+    <div class="card-title">Minhas Reclamações</div>
+    <div class="card-subtitle">41 reclamações</div>
+  </ion-card>
+
+ 
+
+  <ion-card (click)="MReclamacoesG()">
+    <img src="https://res.cloudinary.com/dp9k5sbd4/image/upload/v1502115773/soufiscal_img/todas_reclamacoes.png">
+    <div class="card-title">Todas as Reclamações</div>
+    <div class="card-subtitle">164 reclamações</div>
+  </ion-card>
+
+  <ion-card (click)="ComoAjudar()">
+
+   <img src="https://res.cloudinary.com/dp9k5sbd4/image/upload/v1502115763/soufiscal_img/como_reclamar.png">
+    <div class="card-title">Saiba como Reclamar</div>
+    <div class="card-subtitle"></div>
+  </ion-card>
+
+  <ion-fab top right edge>
+  <button ion-fab color="vibrant" mini (click)="AddReclamacoes()">
+  <ion-icon name="add"></ion-icon></button>
+
+</ion-fab>
+
+
+</ion-content>
+
+  
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>capturafoto</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+   <ion-refresher-content
+   pullingIcon="arrow-dropdown"
+   pullingText="Pull to refresh"
+   refreshingSpinner="circles"
+   refreshingText="Refreshing...">
+   </ion-refresher-content>
+ </ion-refresher>
+ 
+ <ion-fab right bottom>
+   <button color="dark" (click)="takePicture()" ion-fab>
+     <ion-icon name="camera"></ion-icon>
+   </button>
+ </ion-fab>
+ 
+ <div ion-item>
+   <ion-card>
+     <img src="{{passarFoto}}"/>
+   </ion-card>
+ </div>
+ 
+</ion-content>
